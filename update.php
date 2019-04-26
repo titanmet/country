@@ -13,7 +13,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
     $input_name = trim($_POST["name"]);
     if(empty($input_name)){
         $name_err = "Введите название страны.";
-    } elseif(!filter_var($input_name, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[а-яА-ЯЁёa-zA-Z0-9\-\s]+$/u")))){
+    } elseif(!filter_var($input_name, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[а-яА-ЯЁёa-zA-Z0-9\-\s]{3,30}+$/u")))){
         $name_err = "Введите корректное название страны.";
     } else{
         $name = $input_name;
@@ -23,7 +23,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
     $input_capital = trim($_POST["capital"]);
     if(empty($input_capital)){
         $capital_err = "Введите название столицы.";
-    } elseif(!filter_var($input_capital, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[а-яА-ЯЁёa-zA-Z0-9\-\s]+$/u")))){
+    } elseif(!filter_var($input_capital, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[а-яА-ЯЁёa-zA-Z0-9\-\s]{3,30}+$/u")))){
         $capital_err = "Введите корректное название столицы.";
     } else{
         $capital = $input_capital;
