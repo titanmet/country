@@ -1,0 +1,10 @@
+CREATE SCHEMA `countryDB` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+
+CREATE TABLE country (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    capital VARCHAR(100) NOT NULL,
+    people BIGINT(10) NOT NULL
+);
+
+
